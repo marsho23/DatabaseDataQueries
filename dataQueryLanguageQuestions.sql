@@ -1,0 +1,18 @@
+use sakila;
+select * from actor;
+select * from actor where first_name='JOHN';
+select * from actor where last_name = 'Neeson';
+select * from actor where actor_id%10=0;
+select * from film;
+select description from film where id=100;
+select * from film;
+select * from film where rating = 'R';
+select * from film where rating != 'R';
+select * from film order by length asc limit 10;
+select title from film;
+select * from film where special_features like '%deleted scene%';
+select distinct * from country;
+select count(*) as count_countries from country;
+select * from film;
+select * from language;
+select * from language order by name asc;
