@@ -13,6 +13,8 @@ select avg(length) from film;
 
 -- what is the average running time of films by category
 select category,avg(length) as ave_length from film_list group by category;
+select category,avg(length) from film_list group by category; --> 'as ave_length' not needed
+
 
 -- find the movies with the longest runtime
 select * from film where length = (select max(length) from film) limit 1;
