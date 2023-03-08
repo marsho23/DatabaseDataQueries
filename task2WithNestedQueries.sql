@@ -17,3 +17,7 @@ group by category;
 select * from film where length =
 (select max(length) from film)
 limit 1;
+
+-- find the movieS with the longest runtime
+select * from film where length =
+(select max(length) from film);
