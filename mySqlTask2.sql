@@ -21,12 +21,15 @@ select * from film where length = (select max(length) from film) limit 1;
 
 -- how many movies have robots in them
 select count(*) from film where description like '%robot%';
+another way -->  select count(description) as films_with_robots from film where description like '%robot%';
 
 -- count how many movies were released in 2010
 select count(*) from film where release_year='2010';
 
 -- which last names are not repeated
 select last_name from actor where last_name in 
-(select last_name from actor group by last_name having count(last_name)=1)
+(select last_name from actor group by last_name having count(last_name)=1);
+another way -->  select last_name from actor group by last_name having count(last_name) = 1 ;
+HAVING IS WHERE FOR AGGREGATIONS. 
 
 
